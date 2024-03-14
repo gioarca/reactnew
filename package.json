@@ -1,0 +1,56 @@
+{
+  "name": "avegado",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.4",
+    "@heroicons/react": "^2.1.1",
+    "@reduxjs/toolkit": "^2.2.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^11.0.5",
+    "path-browserify": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-favicon": "^2.0.3",
+    "react-router-dom": "^6.22.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.8",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.90.3"
+  },
+  "scripts": {
+    "start": "set NODE_ENV=dev && set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "set NODE_ENV=dev && set NODE_OPTIONS=--openssl-legacy-provider && CI=false && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
