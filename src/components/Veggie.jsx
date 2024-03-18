@@ -17,7 +17,7 @@ function Veggie() {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY_Outlook}&number=10&tags=vegetarian`
       );
       const data = await api.json();
       localStorage.setItem("veggie", JSON.stringify(data.recipes));
@@ -27,36 +27,27 @@ function Veggie() {
   };
 
   return (
-    <div class="flex-row items-center justify-center smartphone:w-auto">
-      <h1 class="flex items-center justify-center text-center text-2xl m-8">
-        The recommended recipes
-      </h1>
+    <div>
+      <h1 class="text-center text-2xl m-12">The recommended recipes</h1>
       <Splide
         options={{
-          perPage: 3,
-          arrows: false,
-          pagination: true,
-          padding: "4rem",
-          drag: "free",
-          gap: "12rem",
+          keyboard: true,
+          perPage: "1",
+          arrows: true,
+          pagination: false,
         }}
       >
         {veggie.map((recipe) => {
           return (
             <SplideSlide key={recipe.id}>
-              <div
-                class="border-2 border-beige my-10
-           rounded-large smartphone:w-3/8 tablet:w-10"
-              >
+              <div className="m-auto w-96 rounded overflow-hidden shadow-xl transition duration-300 hover:scale-105 smartphone:max-w-xl ">
                 <Link to={"/recipe/" + recipe.id}>
-                  <p class="text-center py-2">{recipe.title}</p>
-                  <div class="border-2 border-solid black">
-                    <img
-                      class="flex w-auto"
-                      src={recipe.image}
-                      alt={recipe.title}
-                    />
-                  </div>
+                  <img
+                    className="w-full mb-2"
+                    src={recipe.image}
+                    alt={recipe.title}
+                  />
+                  <p class="text-center m-2">{recipe.title}</p>
                 </Link>
               </div>
             </SplideSlide>

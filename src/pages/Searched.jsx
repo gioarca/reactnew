@@ -12,7 +12,7 @@ function Searched() {
 
   const getSearched = async (name) => {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&maxFat=25&number=10`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY_Outlook}&query=${name}&maxFat=25&number=10`
     );
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
@@ -20,28 +20,26 @@ function Searched() {
   };
 
   return (
-    <div
-      class="grid grid-flow-row-dense grid-cols-3 grid-rows-3"
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Arrow />
+    <div className="flex flex-wrap justify-center grid-flow-row-dense grid-cols-2 grid-rows-3">
+      <div className="flex flex-wrap">
+        <Arrow />
+      </div>
+
       {searchedRecipes.map((item) => {
         return (
           <div
-            class="flex flex-1 justify-center items-center border-2 border-beige my-10
-          rounded-large m-4 "
+            className="max-w-xl rounded-large overflow-hidden shadow-lg m-5"
             key={item.id}
           >
             <Link to={"/recipe/" + item.id}>
-              <h4 class="text-center m-4">{item.title}</h4>
               <img
-                class="flex justify-center items-center overflow-hidden"
+                className="w-auto overflow-hidden m-auto"
                 src={item.image}
                 alt={item.title}
               />
+              <h4 class="flex flex-col text-xl text-center m-4">
+                {item.title}
+              </h4>
             </Link>
           </div>
         );

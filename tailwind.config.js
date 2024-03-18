@@ -30,6 +30,11 @@ module.exports = {
       full: "9999px",
       large: "12px",
     },
+    extend: {
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+    },
   },
   plugins: [],
 };
