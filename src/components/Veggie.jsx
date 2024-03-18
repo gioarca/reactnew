@@ -8,7 +8,7 @@ function Veggie() {
 
   useEffect(() => {
     getVeggie();
-  }, []); // usiamo un  array vuoto in modo da passarci dentro i paramentri quando il componente è montato
+  }, []); // uso un  array vuoto in modo da passarci dentro i paramentri quando il componente è montato
 
   const getVeggie = async () => {
     const check = localStorage.getItem("veggie");
@@ -27,14 +27,16 @@ function Veggie() {
   };
 
   return (
-    <div>
+    <div class="flex-row items-center justify-center smartphone:w-auto">
+      <h1 class="flex items-center justify-center text-center text-2xl m-8">
+        The recommended recipes
+      </h1>
       <Splide
         options={{
           perPage: 3,
           arrows: false,
           pagination: true,
-          marginTop: "100px",
-          padding: "5rem",
+          padding: "4rem",
           drag: "free",
           gap: "12rem",
         }}
@@ -44,12 +46,16 @@ function Veggie() {
             <SplideSlide key={recipe.id}>
               <div
                 class="border-2 border-beige my-10
-           rounded-large smartphone:w-3 tablet:w-5"
+           rounded-large smartphone:w-3/8 tablet:w-10"
               >
                 <Link to={"/recipe/" + recipe.id}>
                   <p class="text-center py-2">{recipe.title}</p>
                   <div class="border-2 border-solid black">
-                    <img src={recipe.image} alt={recipe.title} />
+                    <img
+                      class="flex w-auto"
+                      src={recipe.image}
+                      alt={recipe.title}
+                    />
                   </div>
                 </Link>
               </div>

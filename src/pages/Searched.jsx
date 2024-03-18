@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-// import { motion } from "framer-motion";
 import Arrow from "../components/Arrow";
 
 function Searched() {
@@ -21,7 +20,8 @@ function Searched() {
   };
 
   return (
-    <div //style={"display: grid"}>
+    <div
+      class="grid grid-flow-row-dense grid-cols-3 grid-rows-3"
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
@@ -31,14 +31,14 @@ function Searched() {
       {searchedRecipes.map((item) => {
         return (
           <div
-            class="grid justify-center items-center border-2 border-beige my-10
+            class="flex flex-1 justify-center items-center border-2 border-beige my-10
           rounded-large m-4 "
             key={item.id}
           >
             <Link to={"/recipe/" + item.id}>
               <h4 class="text-center m-4">{item.title}</h4>
               <img
-                class="flex justify-center items-center m-4"
+                class="flex justify-center items-center overflow-hidden"
                 src={item.image}
                 alt={item.title}
               />

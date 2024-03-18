@@ -17,7 +17,7 @@ module.exports = {
     },
     screens: {
       smartphone: "@media (min-width: 480px)",
-      laptop: "@media (min-width: 481px) and (max-width: 960px)",
+      tablet: "@media (min-width: 481px) and (max-width: 960px)",
       desktop: "@media (min-width: 961px)",
     },
     borderRadius: {

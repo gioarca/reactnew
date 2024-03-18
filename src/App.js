@@ -10,7 +10,7 @@ function App() {
       <Logo to={"/"} class="flex justify-center" />
       <div class="p-10 text-center">
         <p>Welcome to this beatiful project!</p>
-        <p>Click on the cards to access to the recipes</p>
+        <p>Click on the cards below to access to the recipes</p>
         <p>or text something in the searchbar</p>
       </div>
       <BrowserRouter>
