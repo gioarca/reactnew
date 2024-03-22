@@ -14,14 +14,13 @@ function RecipeNew() {
         // inserito il timeout di 1.5 secondi
         setIsLoading(true);
         const data = await fetch(
-          `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_API_KEY_2}`
+          `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.Spoon_Key}`
         );
         const detailData = await data.json();
         setDetails(detailData);
         setIsLoading(false);
       }, 1500);
     };
-
     fetchDetails();
   }, [params.name]);
 
@@ -37,7 +36,7 @@ function RecipeNew() {
     <div className="flex flex-wrap justify-center transition-opacity ease-in delay-150">
       <div className="max-w-xl rounded-large overflow-hidden shadow-lg m-5">
         <img className="w-full" src={details.image} alt={details.recipe} />
-        <div className="px-6 py-4">
+        <div key={details.id} className="px-6 py-4">
           <div className="font-bold text-xl m-2">
             <h3>Summary</h3>
           </div>

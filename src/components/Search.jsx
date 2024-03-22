@@ -24,7 +24,9 @@ function Search() {
               className="block flex-1 border-0 bg-transparent py-4 pl-3 ml-3 placeholder:text-black text-black focus:ring-0 sm:text-sm sm:leading-6 transition ease-in delay-100 focus:bg-beige"
               placeholder="Text something :)"
             ></input>
-            <MagnifyingGlassIcon className="h-8 m-3 flex items-center justify-center float-right" />
+            <a href={"/searched/" + input}>
+              <MagnifyingGlassIcon className="h-8 m-3 flex items-center justify-center float-right" />
+            </a>
           </div>
         </div>
       </div>

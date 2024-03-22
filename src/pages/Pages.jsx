@@ -1,5 +1,4 @@
 import Home from "./Home";
-// import Recipe from "./Recipe";
 import Recipe from "./Recipe";
 import Searched from "./Searched";
 import { Route, Routes, useLocation } from "react-router-dom";

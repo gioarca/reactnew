@@ -15,11 +15,6 @@ module.exports = {
       bubbleGum: "#ff77e9",
       bermuda: "#78dcca",
     },
-    screens: {
-      smartphone: "@media (min-width: 480px)",
-      tablet: "@media (min-width: 481px) and (max-width: 960px)",
-      desktop: "@media (min-width: 961px)",
-    },
     borderRadius: {
       none: "0",
       sm: "0.125rem",

@@ -15,7 +15,7 @@ function Searched() {
   const getSearched = async (name) => {
     setTimeout(async () => {
       const data = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_API_KEY_2}&query=${name}&maxFat=25&number=10`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.Spoon_Key}&query=${name}&maxFat=25&number=9`
       );
       const recipes = await data.json();
       setSearchedRecipes(recipes.results);
@@ -33,10 +33,6 @@ function Searched() {
 
   return (
     <div className="flex flex-wrap justify-center grid-flow-row-dense grid-cols-2 grid-rows-3">
-      <div className="flex flex-wrap">
-        <Arrow />
-      </div>
-
       {searchedRecipes.map((item) => {
         return (
           <div
@@ -56,6 +52,9 @@ function Searched() {
           </div>
         );
       })}
+      <div className="flex flex-wrap">
+        <Arrow />
+      </div>
     </div>
   );
 }
