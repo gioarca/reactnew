@@ -1,6 +1,6 @@
 # Project info
 
-Hi! This is a web-app developed with love.
+Hi! This is a web-app developed with love <3
 It's meant to be used for vegan and vegetarian, but everyone can use it! :)
 
 # Getting Started
@@ -31,3 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## More info
+
+To get the complete web-app, write me to ask the key to unlock all the features to this address:
+
+email - giorgio.arcamone93@gmail.com
+linkedin - giorgio-arcamone
