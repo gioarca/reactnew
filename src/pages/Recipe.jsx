@@ -14,7 +14,8 @@ function RecipeNew() {
         // inserito il timeout di 1.5 secondi
         setIsLoading(true);
         const data = await fetch(
-          `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.Spoon_Key}`
+          `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=
+5d80619028154ad6bfad9d4bbf4317d7`
         );
         const detailData = await data.json();
         setDetails(detailData);
